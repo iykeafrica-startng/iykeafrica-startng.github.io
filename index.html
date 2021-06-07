@@ -16,7 +16,7 @@
             }
 
             function verifyToken(tokenValue) {
-                $.get('http://localhost:8080/mobile-app-ws/users/email-verification', {token: tokenValue})
+                $.get('https://photo-ws.herokuapp.com/mobile-app-ws/users/email-verification', {token: tokenValue})
                 .done(function (response) {
                     if (response["operationResult"] === "SUCCESS"){
                         $("#not-successful-result").attr("style", "display: none !important;" );
