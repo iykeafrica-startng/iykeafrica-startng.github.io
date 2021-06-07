@@ -19,7 +19,7 @@
                 $.get('https://photo-ws.herokuapp.com/mobile-app-ws/users/email-verification', {token: tokenValue})
                 .done(function (response) {
 			
-			console.log(response.data);
+			alert(JSON.stringify(response));
 
                     if (response["operationResult"] === "SUCCESS"){
 			//alert("Email successfully verified."));
