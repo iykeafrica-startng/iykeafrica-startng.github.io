@@ -11,7 +11,7 @@
         $(document).ready(function () {
             var urlParams = new URLSearchParams(location.search);
             if (urlParams.has('token')) {
-               	//alert("The token = " + urlParams.get('token'));
+               	alert("The token = " + urlParams.get('token'));
                 verifyToken(urlParams.get('token'));
             }
 
