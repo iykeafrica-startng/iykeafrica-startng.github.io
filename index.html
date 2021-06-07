@@ -19,14 +19,15 @@
                 $.get('https://photo-ws.herokuapp.com/mobile-app-ws/users/email-verification', {token: tokenValue})
                 .done(function (response) {
 			
-			$alert(JSON.stringify(response));
-			$("div").html(data);
+			$("div").html(response);
 
                     if (response["operationResult"] === "SUCCESS"){
+			$("div").html(Email successfully verified.);
 			//alert("Email successfully verified."));
                         $("#not-successful-result").attr("style", "display: none !important;" );
                         $("#successful-result").attr("style", "display: block !important" );
                     }else {
+			$("div").html(Verification link has expired.);
 			//alert("Verification link has expired."));
                         $("#successful-result").attr("style", "display: none !important;" );
                         $("#not-successful-result").attr("style", "display: block !important" );
