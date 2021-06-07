@@ -11,7 +11,7 @@
         $(document).ready(function () {
             var urlParams = new URLSearchParams(location.search);
             if (urlParams.has('token')) {
-               	alert("The token = " + urlParams.get('token'));
+               	//alert("The token = " + urlParams.get('token'));
                 verifyToken(urlParams.get('token'));
             }
 
@@ -19,8 +19,7 @@
                 $.get('https://photo-ws.herokuapp.com/mobile-app-ws/users/email-verification', {token: tokenValue})
                 .done(function (response) {
 			
-			var str = JSON.parse(response);
-			alert(str);
+			console.log(response.data);
 
                     if (response["operationResult"] === "SUCCESS"){
 			//alert("Email successfully verified."));
