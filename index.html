@@ -33,7 +33,11 @@
                 return;
             }
 
-            $.ajaxSetup({"contentType": "application/json"});
+            //$.ajaxSetup({"contentType": "application/json"});
+	      $.ajaxSetup({
+			contentType: "application/json",
+			crossDomain: true
+			});
 
             var dataPayload = {token: tokenValue, password: password_one};
 
